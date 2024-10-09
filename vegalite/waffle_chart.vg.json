@@ -1,0 +1,125 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "background": "transparent",
+    "title": {
+      "text": "Average Income Distribution by Region",
+      "subtitle": "Select a year to see income distribution"
+    },
+    "params": [
+      {
+        "name": "selectedYear",
+        "value": 2023,
+        "bind": {
+          "input": "select",
+          "options": [
+            2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 
+            2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+          ],
+          "name": "Select Year: "
+        }
+      }
+    ],
+    "data": {
+      "url": "../datasets/avg_income_regions.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum.Year == selectedYear"
+      },
+      {
+        "joinaggregate": [
+          {
+            "op": "sum",
+            "field": "Average Income",
+            "as": "TotalAvgIncome"
+          }
+        ]
+      },
+      {
+        "calculate": "round(datum['Average Income'] / datum.TotalAvgIncome * 100)",
+        "as": "Percent"
+      },
+      {
+        "joinaggregate": [
+          {
+            "op": "sum",
+            "field": "Percent",
+            "as": "TotalPercent"
+          }
+        ]
+      },
+      {
+        "calculate": "if(datum.TotalPercent > 100, datum.Percent * (100 / datum.TotalPercent), datum.Percent)",
+        "as": "AdjustedPercent"
+      },
+      {
+        "calculate": "sequence(1, 100)",
+        "as": "Sequence"
+      },
+      {"flatten": ["Sequence"]},
+      {
+        "calculate": "if(datum.Sequence <= max(datum.AdjustedPercent, 1), datum.Regions, '_blank')",
+        "as": "Plot"
+      },
+      {
+        "calculate": "floor((datum.Sequence - 1) / 10)",
+        "as": "row"
+      },
+      {
+        "calculate": "(datum.Sequence - 1) % 10",
+        "as": "col"
+      }
+    ],
+    "facet": {
+      "column": {
+        "field": "Regions",
+        "header": {
+          "labelOrient": "bottom"
+        }
+      }
+    },
+    "spec": {
+      "width": 100, 
+      "height": 100, 
+      "mark": {
+        "type": "rect",
+        "filled": true,
+        "tooltip": true,
+        "stroke": "#fff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "ordinal",
+          "axis": null
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "-y"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Plot == '_blank'",
+            "value": "#e6e3e3"
+          },
+          "scale": {
+            "domain": ["Africa", "Americas", "Asia", "Europe", "MENA", "Oceania"],
+            "range": ["#e41a1c", "#FF8C00", "#4B0082", "#1E90FF", "#FFD700", "#8B4513"]
+          },
+          "field": "Plot",
+          "type": "nominal",
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Regions", "title": "Region"},
+          {"field": "Average Income", "title": "Average Income", "format": "$,.2f"}
+        ]
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 500,
+  "background": "transparent",
+  "title": "Human Development Index (HDI) vs. Gini Coefficient Across Countries",
+  "data": {
+    "url": "../datasets/HDI_and_gini.csv"
+  },
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.HDI > 0"},
+    {"filter": "datum.gini_coefficient > 0"},
+    {"filter": "datum.population > Population_Above"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "HDI",
+      "type": "quantitative",
+      "title": "Human Development Index (HDI)",
+      "scale": {"domain": [0.3, 1]}
+    },
+    "y": {
+      "field": "gini_coefficient",
+      "type": "quantitative",
+      "title": "Gini Coefficient",
+      "scale": {"domain": [10, 80]}
+    }
+  },
+  "layer": [
+    { 
+      "selection": {
+        "region_highlight": {
+          "type": "multi",
+          "fields": ["region"],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "range": [10, 50, 150, 200, 300, 400]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Africa",
+              "Americas",
+              "Asia",
+              "Europe",
+              "MENA",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#FF8C00",
+              "#4B0082",
+              "#1E90FF",
+              "#FFD700",
+              "#8B4513"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "selection": "region_highlight",
+            "value": 0.6
+          },
+          "value": 0.1
+        },
+        "tooltip": [
+          {"field": "country", "type": "nominal"},
+          {"field": "population", "type": "quantitative", "format": ","},
+          {"field": "HDI", "type": "quantitative", "format": ".2f"},
+          {"field": "gini_coefficient", "type": "quantitative", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['country'] == 'China' || datum['country'] == 'Singapore' || datum['country'] == 'Australia' || datum['country'] == 'New Zealand' || datum['country'] == 'Italy' || datum['country'] == 'Yemen' ||  datum['country'] == 'United States'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "country", "type": "nominal"},
+          {"field": "population", "type": "quantitative", "format": ","},
+          {"field": "HDI", "type": "quantitative", "format": ".2f"},
+          {"field": "gini_coefficient", "type": "quantitative", "format": ".2f"}
+        ]
+      }
+    }
+  ]
+}

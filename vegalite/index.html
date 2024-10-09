@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega_lite_vis.js"></script>
+
+    <style>
+        body {
+            background-color: #dbe9fa; /* Light background color */
+            font-family: Arial, sans-serif; /* Font styling */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+        }
+
+        h1 {
+            color: #333; /* Darker color for headings */
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .graph {
+            flex: 1;
+            padding: 10px;
+            background-color: #f0f8ff; /* White background for graphs */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .text-box {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            margin-left: 20px;
+        }
+
+        .text-box-left {
+            margin-right: 20px;
+            margin-left: 0;
+        }
+
+    </style>
+
+    <title>Global Income Inequality</title>
+</head>
+
+<body>
+    <h1>Global Income Inequality</h1>
+
+    <!-- Container for the line graph and text box on the right -->
+    <div class="container">
+        <div id="line" class="graph"></div>
+        <div class="text-box">
+            <p>text box</p>
+        </div>
+    </div>
+
+    <!-- Container for the waffle chart with the text box on the left -->
+    <div class="container">
+        <div class="text-box text-box-left" style="max-height: 230px; width: 300px;">
+            <p>text box</p>
+        </div>
+        <div id="waffle" class="graph"></div>
+    </div>
+
+    <div class="container">
+        <div id="map" class="graph"></div>
+    </div>
+
+    <div class="container">
+        <div id="bubble" class="graph"></div>
+    </div>
+
+    <div class="container">
+        <div id="msia" class="graph"></div>
+        <div class="text-box">
+            <p>text box</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

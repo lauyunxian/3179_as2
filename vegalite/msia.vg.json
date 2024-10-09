@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Average Income per State in Malaysia",
+    "width": 600,
+    "height": 350,
+    "background": "transparent",
+    "projection": {
+      "type": "equirectangular"
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "../map_data/malaysia-states.topojson",
+          "format": {"type": "topojson", "feature": "states"}
+        },
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.Name",
+            "as": "note"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "fill": "#ddd",
+          "stroke": "white",
+          "strokeWidth": 1
+        },
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+           "url": "../datasets/msia_states_data.csv"
+        },
+        "transform": [
+          {
+            "lookup": "state",
+            "from": {
+              "data": {
+                "url": "../map_data/malaysia-states.topojson",
+                "format": {
+                  "type": "topojson",
+                  "feature": "states"
+                }
+              },
+              "key": "properties.Name"
+            },
+            "as": "geo"
+          }
+        ],
+        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+        "encoding": {
+          "shape": {"field": "geo", "type": "geojson"},
+          "color": {
+            "field": "mean income",
+            "type": "quantitative",
+            "scale": {"domain": [4000, 14000], "scheme": "bluegreen"},
+            "legend": {
+              "format": ".2s",
+              "title": "Average Income (RM)",
+              "labelFontSize": 8,
+              "titleFontSize": 10,
+              "orient": "right"
+            }
+          },
+          "tooltip": [
+            {"field": "state", "type": "nominal", "title": "State"},
+            {
+              "field": "mean income",
+              "type": "quantitative",
+              "title": "Average Income (RM)",
+              "format": ","
+            },
+            {"field": "expenditure_mean", "type": "quantitative", "title": "Mean Expenditure (RM)", "format": ","},
+            {"field": "poverty", "type": "quantitative", "title": "Poverty Rate (%)"}
+          ]
+        }
+      }
+    ],
+    "config": {}
+  }
+  
