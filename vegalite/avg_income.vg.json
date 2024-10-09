@@ -9,7 +9,7 @@
         "text": "Average Income (USD) by Region Over Time"
       },
       "data": {
-        "url": "../datasets/avg_income_regions.csv",
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/avg_income_regions.csv",
         "format": {"type": "csv"}
       },
       "transform": [{"filter": {"param": "brush"}}],
@@ -96,7 +96,7 @@
       "mark": "line",
       "title": "Brush to Filter by Year",
       "data": {
-        "url": "../datasets/avg_income_world.csv",
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/avg_income_world.csv",
         "format": {"type": "csv"}
       },
       "params": [
