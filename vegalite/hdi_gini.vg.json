@@ -5,7 +5,7 @@
   "background": "transparent",
   "title": "Human Development Index (HDI) vs. Gini Coefficient Across Countries",
   "data": {
-    "url": "../datasets/HDI_and_gini.csv"
+    "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/HDI_and_gini.csv"
   },
   "params": [
     {

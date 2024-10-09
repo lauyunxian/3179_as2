@@ -6,7 +6,7 @@
   "background": "transparent",
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "../map_data/ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "layer": [
@@ -40,7 +40,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "../datasets/countries_income_level.csv"
+              "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/countries_income_level.csv"
             },
             "key": "Country Name",
             "fields": ["Country Income Level"]
@@ -78,7 +78,7 @@
     },
     {
       "data": {
-        "url": "../map_data/oceans.topojson",
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/oceans.topojson",
         "format": {"type": "topojson", "feature": "oceans"}
       },
       "mark": {
@@ -88,7 +88,7 @@
     },
     {
       "data": {
-        "url": "../map_data/WorldMapWithGraticules.topojson",
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/WorldMapWithGraticules.topojson",
         "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
       },
       "mark": {

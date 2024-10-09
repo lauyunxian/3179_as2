@@ -21,7 +21,7 @@
       }
     ],
     "data": {
-      "url": "../datasets/avg_income_regions.csv"
+      "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/avg_income_regions.csv"
     },
     "transform": [
       {

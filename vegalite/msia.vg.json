@@ -10,7 +10,7 @@
     "layer": [
       {
         "data": {
-          "url": "../map_data/malaysia-states.topojson",
+          "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/malaysia-states.topojson",
           "format": {"type": "topojson", "feature": "states"}
         },
         "transform": [
@@ -29,14 +29,14 @@
       },
       {
         "data": {
-           "url": "../datasets/msia_states_data.csv"
+           "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/msia_states_data.csv"
         },
         "transform": [
           {
             "lookup": "state",
             "from": {
               "data": {
-                "url": "../map_data/malaysia-states.topojson",
+                "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/malaysia-states.topojson",
                 "format": {
                   "type": "topojson",
                   "feature": "states"
