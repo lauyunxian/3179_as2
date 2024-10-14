@@ -8,6 +8,7 @@
       "title": {
         "text": "Average Income (USD) by Region Over Time"
       },
+      
       "data": {
         "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/avg_income_regions.csv",
         "format": {"type": "csv"}
@@ -84,7 +85,7 @@
             "tooltip": [
               {"field": "Regions", "type": "nominal", "title": "Region"},
               {"field": "Year", "type": "ordinal", "title": "Year"},
-              {"field": "Average Income", "type": "quantitative", "title": "Average Income (USD)"}
+              {"field": "Average Income", "type": "quantitative", "title": "Average Income (USD)", "format": "$,.2f"}
             ]
           }
         }

@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
+  "width": 750,
   "height": 500,
   "background": "transparent",
   "title": "Human Development Index (HDI) vs. Gini Coefficient Across Countries",
   "data": {
-    "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/HDI_and_gini.csv"
+    "url": "../datasets/HDI_and_gini.csv"
   },
   "params": [
     {
@@ -23,20 +23,18 @@
   "transform": [
     {"filter": "datum.HDI > 0"},
     {"filter": "datum.gini_coefficient > 0"},
-    {"filter": "datum.population > Population_Above"}
+    {"filter": "datum.Population > Population_Above"}
   ],
   "encoding": {
     "x": {
       "field": "HDI",
       "type": "quantitative",
-      "title": "Human Development Index (HDI)",
-      "scale": {"domain": [0.3, 1]}
+      "title": "Human Development Index (HDI)"
     },
     "y": {
       "field": "gini_coefficient",
       "type": "quantitative",
-      "title": "Gini Coefficient",
-      "scale": {"domain": [10, 80]}
+      "title": "Gini Coefficient"
     }
   },
   "layer": [
@@ -44,24 +42,24 @@
       "selection": {
         "region_highlight": {
           "type": "multi",
-          "fields": ["region"],
+          "fields": ["Region"],
           "bind": "legend"
         }
       },
       "mark": "circle",
       "encoding": {
         "size": {
-          "field": "population",
+          "field": "Population",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
             "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
-            "range": [10, 50, 150, 200, 300, 400]
+            "range": [30, 80, 160, 250, 480, 900]
           },
           "legend": {"format": ".1s"}
         },
         "color": {
-          "field": "region",
+          "field": "Region",
           "type": "nominal",
           "scale": {
             "domain": [
@@ -85,43 +83,34 @@
         "opacity": {
           "condition": {
             "selection": "region_highlight",
-            "value": 0.6
+            "value": 0.55
           },
-          "value": 0.1
+          "value": 0
         },
         "tooltip": [
-          {"field": "country", "type": "nominal"},
-          {"field": "population", "type": "quantitative", "format": ","},
+          {"field": "country", "type": "nominal", "title": "Country"},
+          {"field": "Population", "type": "quantitative", "format": ","},
           {"field": "HDI", "type": "quantitative", "format": ".2f"},
-          {"field": "gini_coefficient", "type": "quantitative", "format": ".2f"}
+          {"field": "gini_coefficient", "type": "quantitative", "format": ".2f", "title": "Gini Coefficient"}
         ]
       }
     },
     {
       "mark": {
         "type": "text",
-        "align": "right",
-        "baseline": "middle",
-        "dx": -12,
-        "fontSize": 11.5,
-        "fontStyle": "italic"
+        "align": "left",
+        "dx": -50,  
+        "dy": -250, 
+        "color": "black",
+        "fontSize": 12
       },
       "encoding": {
-        "text": {"field": "country", "type": "nominal"},
-        "color": {"value": "black"},
-        "opacity": {
-          "condition": {
-            "test": "datum['country'] == 'China' || datum['country'] == 'Singapore' || datum['country'] == 'Australia' || datum['country'] == 'New Zealand' || datum['country'] == 'Italy' || datum['country'] == 'Yemen' ||  datum['country'] == 'United States'",
-            "value": 1
-          },
-          "value": 0
+        "text": {
+          "value": ["Countries with higher HDI tend to have lower Gini", "coefficients, indicating lower inequality."]
         },
-        "tooltip": [
-          {"field": "country", "type": "nominal"},
-          {"field": "population", "type": "quantitative", "format": ","},
-          {"field": "HDI", "type": "quantitative", "format": ".2f"},
-          {"field": "gini_coefficient", "type": "quantitative", "format": ".2f"}
-        ]
+        "x": {"value": 80},
+        "y": {"value": 290},
+        "fontWeight": {"value": "lighter"}
       }
     }
   ]

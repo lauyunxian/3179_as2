@@ -1,4 +1,4 @@
-﻿country,region,HDI,gini_coefficient,population
+﻿country,Region,HDI,gini_coefficient,Population
 Afghanistan,Asia,0.462,29.4,42647492
 Albania,Europe,0.789,30.8,2791765
 Algeria,Africa,0.745,27.6,46814308
