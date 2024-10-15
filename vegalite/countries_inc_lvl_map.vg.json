@@ -39,14 +39,14 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "../datasets/countries_income_level.csv"
+              "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/countries_income_level.csv"
             },
             "key": "Country Name",
             "fields": ["Country Income Level", "GDP"]
           }
         }
       ],
-            "selection": {
+      "selection": {
         "country_select": {
           "type": "single",
           "fields": ["properties.NAME"],
@@ -188,7 +188,6 @@
               "Lesotho",
               "Liberia",
               "Libya",
-              "Liechtenstein",
               "Lithuania",
               "Luxembourg",
               "Macao, China",
@@ -207,7 +206,6 @@
               "Mexico",
               "Micronesia",
               "Moldova",
-              "Monaco",
               "Mongolia",
               "Montenegro",
               "Montserrat",
@@ -445,7 +443,6 @@
               "Lesotho",
               "Liberia",
               "Libya",
-              "Liechtenstein",
               "Lithuania",
               "Luxembourg",
               "Macao, China",
@@ -464,7 +461,6 @@
               "Mexico",
               "Micronesia",
               "Moldova",
-              "Monaco",
               "Mongolia",
               "Montenegro",
               "Montserrat",
@@ -622,26 +618,38 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/countries_income_level.csv",
-        "format": { "type": "csv" }
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
       "transform": [
         {
-          "filter": {
-            "and": [
-              { "field": "Country Name", "equal": "Liechtenstein" }
-            ]
-          }
+          "filter": {"field": "properties.NAME", "oneOf": ["Luxembourg", "Burundi", "Malaysia"]}
+        },
+        {
+          "calculate": "datum.properties.NAME",
+          "as": "Country Name"
+        },
+        {
+          "calculate": "datum.properties.NAME === 'Burundi' ? 29.9189 : datum.properties.NAME === 'Luxembourg' ? 6.1319 : datum.properties.NAME === 'Malaysia' ? 101.9758 : null",
+          "as": "longitude"
+        },
+        {
+          "calculate": "datum.properties.NAME === 'Burundi' ? -3.3731 : datum.properties.NAME === 'Luxembourg' ? 49.8153 : datum.properties.NAME === 'Malaysia' ? 4.2105 : null",
+          "as": "latitude"
         }
       ],
-      "mark": "text",
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": 1,
+        "dy": -5,
+        "fontSize": 12,
+        "color": "black"
+      },
       "encoding": {
-        "text": {
-          "value": ["Liechtenstein is the richest country, boasting a GDP of", " $190,000, while Burundi is the poorest country,", "with a GDP of just $231."]
-          },
-        "color": {
-          "value": "black"
-        }
+        "longitude": {"field": "longitude"},
+        "latitude": {"field": "latitude"},
+        "text": {"field": "Country Name"}
       }
     }
   ]

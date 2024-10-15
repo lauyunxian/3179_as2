@@ -26,6 +26,14 @@
         h1 {
             color: #333;
             margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 8px 0; 
+            padding: 0;
+            font-size: 17px;
         }
 
         .container {
@@ -53,11 +61,16 @@
             display: flex;
             flex-direction: column;
             flex: 1;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 10px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin-left: 20px;
+            margin-left: 10px;
+        }
+
+        .dataset-box {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            border-radius: 8px;
         }
 
         .text-box-trans {
@@ -72,16 +85,13 @@
             flex: 1;
             height: 500px;
             padding: 15px;
-            /* padding-top: 0px; */
-            background-color: #f9f9f9;
+            padding-bottom: 5px;
             border-radius: 8px;
-            margin-bottom: 20px;
         }
 
         .big-box {
             flex: 2;
-            padding: 10px;
-            /* background-color: #f9f9f9; */
+            padding-left: 10px;
             border-radius: 8px;
         }
 
@@ -91,64 +101,97 @@
 </head>
 
 <body>
-
-    <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 45px;">Global Income Inequality</h1>
+    <h1 style="font-size: 45px;">Global Income Inequality</h1>
     <div class="container-2">
-        <p>Did you know that income inequality is one of the hottest topics shaping our world today? 🌍</P> 
-        <p>It’s all about how wealth is unevenly spread, both between countries and within them, and it affects us all! 🤯</p>
-        <p>In this poster, we’ll explore the fascinating relationship between income and human development, and how it impacts our daily lives!
-            We’ll also take a closer look at income distribution in Malaysia, revealing what’s really happening behind the numbers. 📊
-            Get ready to discover the surprising factors driving inequality and its impact on society! 🚀</p>
+        <p><strong>Did you know</strong> that <strong style="color: #922B21;">income inequality</strong> is one of the hottest topics shaping our world today 🌍?</p> 
+        <p>It’s all about how <strong>wealth</strong> is unevenly spread, both between countries and within them, and it affects us all!</p>
+        <p><strong>Get ready</strong> to see the <i>alarming realities</i> of income inequality and understand just how <strong style="color: #922B21;">severe</strong> the situation is right now. </p>   
     </div>
-
-    <div class="container">
+    
+    <div class="container" style="margin-top: 20px;">
         <div id="line" class="graph"></div>
         <div class="text-box-trans">
-            <!-- Small text box -->
-            <div class="small-box">
-                <p>The chart shows clear differences in average income between regions. Europe leads in economic 
-                    prosperity, while Africa faces major challenges with much lower income levels. Some regions, 
-                    like Asia and the Americas, are growing and improving, but others remain stagnant. 
-                    This highlights the need for focused economic policies to tackle these inequalities and help 
-                    the struggling regions.</p>
-            </div>
             <div class="big-box">
-                
+                <h1 style="font-size: 30px; color: #616161;">Average Income Distribution (USD) by Region</h1>
+            </div>
+            <div class="small-box">
+                <p style="margin: 15px 0;">The chart shows clear differences in <i>average income</i> between regions. 
+                    <strong style="color: #3498DB;">Europe</strong> <strong>leads</strong> in economic prosperity, while 
+                    <strong style="color: #E74C3C;">Africa</strong> faces major challenges with <strong>much lower income levels</strong>. 
+                    Some regions, like <strong style="color: #73129a;">Asia</strong> and the <strong style="color: #E67E22;">Americas</strong>, 
+                    are <i style="font-size: 18px;">growing</i> and <i style="font-size: 18px;">improving</i>, 
+                    but others remain stagnant. This highlights the need for focused economic policies to tackle 
+                    these inequalities and help the struggling regions. </p>
+                <p style="font-size: 13px; color: rgb(126, 126, 126);">- The more detailed distribution by regions can be seen in the waffle chart below -</p>
             </div>
         </div>
     </div>
 
-    <!-- Container for the waffle chart with the text box on the left -->
-    <div class="container">
+    <div class="container" style="margin-bottom: 30px;">
         <div id="waffle" class="graph"></div>
     </div>
+    
+    <h1 style="font-size: 30px; color: #616161;">Income Levels and Inequality Across Countries</h1>
 
     <div class="container">
         <div id="map" class="graph"></div>
     </div>
 
     <div class="container-2" style="padding-top: 2px;">
-        <p>🌍</P> 
+        <p style="margin: 10px;">
+            The map highlights <strong><i>Luxembourg</i></strong>, which is the <strong>richest</strong> country, with a GDP per capita of <strong style="color: #d85c31;">$190,000</strong>, and <strong><i>Burundi</i></strong>, 
+            which is the <strong>poorest</strong>, with just <strong style="background-color: #fbe58d;">$231</strong>. 
+            This big difference highlights how <i>unevenly wealth</i> is spread around the world. The <i>huge gap</i> in GDP between these two countries demonstrates the drastic differences in economic situations globally.
+        </p>
+        
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-top: 14px;">
         <div id="bubble" class="graph"></div>
     </div>
 
     <div class="container-2" style="padding-top: 2px;">
-        <p>🌍</P>
+        <p>
+            <strong>Countries with higher HDI</strong> usually have <strong>lower Gini scores</strong>, meaning their income is more evenly spread. 
+            <strong style="color: #3498DB;">European countries</strong> mostly fall into the <i>high HDI and low inequality group</i>, while many <strong style="color: #E74C3C;">African countries</strong> 
+            tend to have <i>lower HDI and higher inequality</i>.
+        </p>
+        <p>
+            The trend also suggests that as a country develops and improves its <strong>HDI</strong>, it often also works towards <strong>reducing income inequality</strong>.
+        </p>
+        
     </div>
     
+    <h1 style="font-size: 30px; color: #616161; margin-top: 30px;">Income Levels and Inequality Across Countries</h1>
+
     <div class="container">
         <div id="msia" class="graph"></div>
         <div class="text-box">
-            <p>text box</p>
+            <p>
+                With the average income in Malaysia being <span style="font-weight: bold; color: green;">RM 7,903</span>, 
+                it's clear that most states fall short of this benchmark. In contrast, those with incomes 
+                exceeding <span style="font-weight: bold;">RM 10,000</span> reveal a troubling level of income inequality, 
+                indicating that many are <span style="font-weight: bold; font-size: 20px;">left behind</span> and struggling to make ends meet.
+            </p>
+            <p>Moreover, <i>Sabah's highest poverty rate</i> highlights that even in regions with <strong>higher average incomes</strong>, many individuals still <strong>live below the poverty line.</strong></p>
         </div>
     </div>
-
+    <br></br>
     <div class="container">
-        <p>jlyx</p>
-    </div>
+        <div class="dataset-box">
+            <p style="font-size: small; margin: 2px 0;">Author: Lau Yun Xian 33283567</p>
+            <p style="font-size: small; margin: 2px 0;">Date: 15/10/2024</p>
+            <p style="font-size: small; margin: 2px 0;">Dataset Source:</p>
+            <ul style="font-size: small; margin: 2px 0; padding-left: 20px;">
+                <li><a href="https://wid.world/data/" target="_blank">World Inequality Database</a></li>
+                <li><a href="https://www.isopp.org/country-income-level" target="_blank">ISOPP Country Income Level</a></li>
+                <li><a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank">UNDP Human Development Index</a></li>
+                <li><a href="https://open.dosm.gov.my/dashboard/household-income-expenditure" target="_blank">DOSM Household Income and Expenditure</a></li>
+                <li><a href="https://www.cia.gov/the-world-factbook/field/gini-index-coefficient-distribution-of-family-income/country-comparison/" target="_blank">CIA World Factbook: Gini Index</a></li>
+                <li><a href="https://www.worldometers.info/world-population/population-by-country/" target="_blank">Worldometers Population by Country</a></li>
+            </ul>
+        </div>
+    </div>    
 
 </body>
 

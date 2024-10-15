@@ -5,7 +5,7 @@
   "background": "transparent",
   "title": "Human Development Index (HDI) vs. Gini Coefficient Across Countries",
   "data": {
-    "url": "../datasets/HDI_and_gini.csv"
+    "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/HDI_and_gini.csv"
   },
   "params": [
     {
@@ -60,6 +60,7 @@
         },
         "color": {
           "field": "Region",
+          "title": "Region (Click to Highlight)",
           "type": "nominal",
           "scale": {
             "domain": [
@@ -98,6 +99,39 @@
     {
       "mark": {
         "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+      "text": {"field": "country", "type": "nominal"},
+      "color": {"value": "black"},
+      "opacity": {"condition": {
+          "test": "datum['country'] == 'Brazil' || datum['country'] == 'Norway' || datum['country'] == 'Chad'",
+          "value": 1
+          },
+          "value": 0
+          }
+        }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/HDI_and_gini.csv",
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              { "field": "country", "equal": "Brazil" }
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
         "align": "left",
         "dx": -50,  
         "dy": -250, 
@@ -106,11 +140,70 @@
       },
       "encoding": {
         "text": {
-          "value": ["Countries with higher HDI tend to have lower Gini", "coefficients, indicating lower inequality."]
+          "value": ["Brazil, despite its mid-range HDI,", "has a high Gini coefficient, reflecting", "income disparity."]
         },
-        "x": {"value": 80},
-        "y": {"value": 290},
-        "fontWeight": {"value": "lighter"}
+        "x": {"value": 160},
+        "y": {"value": 280}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/HDI_and_gini.csv",
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              { "field": "country", "equal": "Brazil" }
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -50,  
+        "dy": -220,  
+        "color": "black",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "value": ["Chad, with a low HDI and high Gini,", "represents a country with significant", "income inequality."]
+        },
+        "x": {"value": 100},
+        "y": {"value": 460}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/HDI_and_gini.csv",
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              { "field": "country", "equal": "Brazil" }
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -50,  
+        "dy": -250, 
+        "color": "black",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "value": ["Norway, with one of the highest HDI scores,", "has a relatively low Gini coefficient,", "indicating a balanced income distribution."]
+        },
+        "x": {"value": 500},
+        "y": {"value": 620}
       }
     }
   ]

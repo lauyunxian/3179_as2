@@ -4,11 +4,7 @@
   "vconcat": [
     {
       "width": 500,
-      "height": 350,
-      "title": {
-        "text": "Average Income (USD) by Region Over Time"
-      },
-      
+      "height": 350,      
       "data": {
         "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/avg_income_regions.csv",
         "format": {"type": "csv"}
@@ -43,7 +39,7 @@
             "color": {
               "field": "Regions",
               "type": "nominal",
-              "title": "Region",
+              "title": ["Region", "(Click to Highlight)"],
               "scale": {
                 "domain": ["Africa", "Americas", "Asia", "Europe", "MENA", "Oceania"],
                 "range": ["#e41a1c", "#FF8C00", "#4B0082", "#1E90FF", "#FFD700", "#8B4513"]
@@ -111,7 +107,7 @@
         "y": {
           "field": "Average Income",
           "type": "quantitative",
-          "axis": {"title": "Average Income (USD)", "grid": false}
+          "axis": {"title": "World Average Income (USD)", "grid": false}
         }
       }
     }

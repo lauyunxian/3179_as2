@@ -1,81 +1,211 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Average Income per State in Malaysia",
-    "width": 600,
-    "height": 350,
-    "background": "transparent",
-    "projection": {
-      "type": "equirectangular"
-    },
-    "layer": [
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/malaysia-states.topojson",
-          "format": {"type": "topojson", "feature": "states"}
-        },
-        "transform": [
-          {
-            "calculate": "'Data is not available in ' + datum.properties.Name",
-            "as": "note"
-          }
-        ],
-        "mark": {
-          "type": "geoshape",
-          "fill": "#ddd",
-          "stroke": "white",
-          "strokeWidth": 1
-        },
-        "encoding": {"tooltip": {"field": "note"}}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Average Income per State in Malaysia",
+  "width": 550,
+  "height": 350,
+  "background": "transparent",
+  "projection": {
+    "type": "equirectangular"
+  },
+  "params": [
+    {
+      "name": "incomeRange",
+      "value": 4000,
+      "bind": {
+        "input": "range",
+        "min": 4000,
+        "max": 13000,
+        "step": 1000,
+        "name": "Minimum Average Income (RM):"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/malaysia-states.topojson",
+        "format": {"type": "topojson", "feature": "states"}
       },
-      {
-        "data": {
-           "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/msia_states_data.csv"
-        },
-        "transform": [
-          {
-            "lookup": "state",
-            "from": {
-              "data": {
-                "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/malaysia-states.topojson",
-                "format": {
-                  "type": "topojson",
-                  "feature": "states"
-                }
-              },
-              "key": "properties.Name"
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.Name",
+          "as": "note"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "data": {
+         "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/msia_states_data.csv"
+      },
+      "transform": [
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/map_data/malaysia-states.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "states"
+              }
             },
-            "as": "geo"
+            "key": "properties.Name"
+          },
+          "as": "geo"
+        },
+        {
+          "filter": "datum['mean income'] >= incomeRange"
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "mean income",
+          "type": "quantitative",
+          "scale": {"domain": [4000, 13000], "scheme": "bluegreen"},
+          "legend": {
+            "format": ".2s",
+            "title": "Average Income (RM)",
+            "labelFontSize": 8,
+            "titleFontSize": 10,
+            "orient": "right"
           }
-        ],
-        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
-        "encoding": {
-          "shape": {"field": "geo", "type": "geojson"},
-          "color": {
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {
             "field": "mean income",
             "type": "quantitative",
-            "scale": {"domain": [4000, 14000], "scheme": "bluegreen"},
-            "legend": {
-              "format": ".2s",
-              "title": "Average Income (RM)",
-              "labelFontSize": 8,
-              "titleFontSize": 10,
-              "orient": "right"
-            }
+            "title": "Average Income (RM)",
+            "format": ","
           },
-          "tooltip": [
-            {"field": "state", "type": "nominal", "title": "State"},
-            {
-              "field": "mean income",
-              "type": "quantitative",
-              "title": "Average Income (RM)",
-              "format": ","
-            },
-            {"field": "expenditure_mean", "type": "quantitative", "title": "Mean Expenditure (RM)", "format": ","},
-            {"field": "poverty", "type": "quantitative", "title": "Poverty Rate (%)"}
-          ]
-        }
+          {"field": "expenditure_mean", "type": "quantitative", "title": "Mean Expenditure (RM)", "format": ","},
+          {"field": "poverty", "type": "quantitative", "title": "Poverty Rate (%)"}
+        ]
       }
-    ],
-    "config": {}
-  }
-  
+    },
+    {
+      "data": {
+        "values": [
+          {"state": "Kedah", "latitude": 5.8184, "longitude": 100.5280},
+          {"state": "Kelantan", "latitude": 5.1493, "longitude": 101.9033},
+          {"state": "Sabah", "latitude": 5.2204, "longitude": 113.9968},
+          {"state": "Selangor", "latitude": 3.2838, "longitude": 100.8183},
+          {"state": "Kuala Lumpur", "latitude": 3.1790, "longitude": 102.3869},
+          {"state": "Putrajaya", "latitude": 2.614, "longitude": 101.3964}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "color": "black",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "dx": 5,
+        "dy": -5
+      },
+      "encoding": {
+        "text": {"field": "state", "type": "nominal"},
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/msia_states_data.csv",
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              { "field": "state", "equal": "Putrajaya" }
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -50,  
+        "dy": -250, 
+        "color": "black",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "value": ["Mean monthly household income", "of Malaysia is approximately RM 7,903."]
+        },
+        "x": {"value": 200},
+        "y": {"value": 300}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/msia_states_data.csv",
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              { "field": "state", "equal": "Putrajaya" }
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -50,  
+        "dy": -250, 
+        "color": "black",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "value": ["Putrajaya have the highest", "income and lowest poverty rate"]
+        },
+        "x": {"value": 85},
+        "y": {"value": 530}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/lauyunxian/3179_as2/main/datasets/msia_states_data.csv",
+        "format": { "type": "csv" }
+      },
+      "transform": [
+        {
+          "filter": {
+            "and": [
+              { "field": "state", "equal": "Sabah" }
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -50,  
+        "dy": -250, 
+        "color": "black",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "value": ["Sabah have the", "highest poverty rate"]
+        },
+        "x": {"value": 488},
+        "y": {"value": 430}
+      }
+    }
+  ],
+  "config": {}
+}

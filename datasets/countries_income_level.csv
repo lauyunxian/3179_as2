@@ -1,254 +1,253 @@
-Country Name,Country Income Level,GDP,,
-Afghanistan,Low Income Country,356,,
-Albania,Lower Middle Income Country,6678,,
-Algeria,Low Income Country,4220,,
-American Samoa,Lower Middle Income Country,13000,,
-Andorra,High Income Country,42055,,
-Angola,Lower Middle Income Country,2995,,
-Anguilla,High Middle Income Country,25000,,
-Antarctica,Low Income Country,,,
-Antigua and Barbuda,Lower Middle Income Country,18932,,
-Argentina,Lower Middle Income Country,13935,,
-Armenia,Lower Middle Income Country,6770,,
-Aruba,High Middle Income Country,34000,,
-Ashmore and Cartier Islands,Low Income Country,,,
-Australia,High Income Country,63945,,
-Austria,High Income Country,52004,,
-Azerbaijan,Lower Middle Income Country,7646,,
-Bahamas,High Middle Income Country,32443,,
-Bahrain,High Income Country,28948,,
-Bangladesh,Low Income Country,2717,,
-Barbados,High Middle Income Country,19970,,
-Belarus,High Middle Income Country,7935,,
-Belgium,High Income Country,49700,,
-Belize,Low Income Country,7012,,
-Benin,Low Income Country,1265,,
-Bermuda,High Income Country,126000,,
-Bhutan,Low Income Country,4300,,
-Bolivia,Low Income Country,3566,,
-Bosnia and Herz.,Low Income Country,7653,,
-Botswana,Lower Middle Income Country,8341,,
-Bouvet Island,Low Income Country,,,
-Brazil,Lower Middle Income Country,9130,,
-British Indian Ocean Territory,Low Income Country,,,
-British Virgin Islands,High Income Country,39000,,
-Brunei,High Income Country,36633,,
-Bulgaria,High Middle Income Country,13045,,
-Burkina Faso,Low Income Country,839,,
-Burma,Low Income Country,1500,,
-Burundi,Low Income Country,231,,
-Cambodia,Low Income Country,1741,,
-Cameroon,Low Income Country,1605,,
-Canada,High Income Country,55120,,
-Cape Verde,Low Income Country,4454,,
-Cayman Islands,High Income Country,100000,,
-Central African Rep.,Low Income Country,467,,
-Chad,Low Income Country,688,,
-Channel Islands,High Income Country,60000,,
-Chile,High Middle Income Country,15395,,
-China,Lower Middle Income Country,12604,,
-Christmas Island,High Middle Income Country,20000,,
-Clipperton Island,Low Income Country,,,
-Cocos (Keelings) Island,Lower Middle Income Country,14000,,
-Colombia,Lower Middle Income Country,6648,,
-Comoros,Low Income Country,1489,,
-Dem. Rep. Congo,Low Income Country,567,,
-Congo,Low Income Country,2422,,
-Costa Rica,Lower Middle Income Country,13456,,
-Côte d'Ivoire,Low Income Country,2304,,
-Croatia,High Middle Income Country,18163,,
-Cuba,Lower Middle Income Country,9000,,
-Curacao,High Middle Income Country,23000,,
-Cyprus,High Middle Income Country,21361,,
-Czechia,High Middle Income Country,27257,,
-Denmark,High Income Country,66985,,
-Dhekelia,Low Income Country,,,
-Djibouti,Low Income Country,3500,,
-Dominica,Lower Middle Income Country,9159,,
-Dominican Rep.,Lower Middle Income Country,10119,,
-Ecuador,Low Income Country,6455,,
-Egypt,Lower Middle Income Country,4233,,
-El Salvador,Lower Middle Income Country,5173,,
-Equatorial Guinea,Lower Middle Income Country,6550,,
-Eritrea,Low Income Country,1500,,
-Estonia,High Middle Income Country,28221,,
-Ethiopia,Low Income Country,1011,,
-Falkland Is.,High Income Country,56000,,
-Faroe Islands,High Income Country,49000,,
-Fiji,Low Income Country,5376,,
-Finland,High Income Country,50424,,
-France,High Income Country,41989,,
-French Guiana,High Middle Income Country,22000,,
-French Polynesia,High Middle Income Country,23000,,
-French Southern and Antarctic Lands,Low Income Country,,,
-Gabon,Lower Middle Income Country,8669,,
-Gambia,Low Income Country,862,,
-Gaza Strip,Low Income Country,1300,,
-Georgia,Lower Middle Income Country,6484,,
-Germany,High Income Country,48429,,
-Ghana,Low Income Country,2197,,
-Gibraltar,High Income Country,110000,,
-Greece,High Middle Income Country,21039,,
-Greenland,High Income Country,40000,,
-Grenada,Lower Middle Income Country,10747,,
-Guadeloupe,High Middle Income Country,25000,,
-Guam,High Income Country,36000,,
-Guatemala,Low Income Country,5323,,
-Guernsey,High Income Country,67000,,
-Guinea,Low Income Country,1510,,
-Guinea-Bissau,Low Income Country,776,,
-Guyana,High Middle Income Country,18691,,
-Haiti,Low Income Country,1761,,
-Heard Island and McDonald Islands,Low Income Country,,,
-Holy See (Vatican City),High Middle Income Country,20000,,
-Honduras,Low Income Country,3031,,
-"Hong Kong, China",High Income Country,48198,,
-Hungary,High Middle Income Country,18462,,
-Iceland,High Income Country,73199,,
-India,Low Income Country,2375,,
-Indonesia,Low Income Country,4731,,
-Iran,Lower Middle Income Country,4340,,
-Iraq,Low Income Country,5995,,
-Ireland,High Income Country,103570,,
-Isle of Man,High Income Country,51000,,
-Israel,High Income Country,57346,,
-Italy,High Income Country,33721,,
-Jamaica,Lower Middle Income Country,6022,,
-Jan Mayen,Low Income Country,,,
-Japan,High Income Country,33850,,
-Jersey,High Income Country,56000,,
-Jordan,Lower Middle Income Country,4216,,
-Kazakhstan,High Middle Income Country,11012,,
-Kenya,Low Income Country,2091,,
-Kiribati,Low Income Country,1712,,
-North Korea,Low Income Country,1200,,
-South Korea,High Middle Income Country,32159,,
-Kosovo,Low Income Country,4800,,
-Kuwait,High Income Country,40213,,
-Kyrgyzstan,Low Income Country,1571,,
-Laos,Low Income Country,2080,,
-Latvia,High Middle Income Country,21878,,
-Lebanon,Low Income Country,3700,,
-Lesotho,Low Income Country,1117,,
-Liberia,Low Income Country,745,,
-Libya,Lower Middle Income Country,6334,,
-Liechtenstein,High Income Country,190000,,
-Lithuania,High Middle Income Country,24969,,
-Luxembourg,High Income Country,125935,,
-"Macao, China",High Middle Income Country,31205,,
-Macedonia,Lower Middle Income Country,7400,,
-Madagascar,Low Income Country,491,,
-Malawi,Low Income Country,640,,
-Malaysia,High Middle Income Country,11711,,
-Maldives,Low Income Country,11810,,
-Mali,Low Income Country,816,,
-Malta,High Middle Income Country,33634,,
-Marshall Islands,Low Income Country,6978,,
-Martinique,High Middle Income Country,25000,,
-Mauritania,Low Income Country,2128,,
-Mauritius,Lower Middle Income Country,10107,,
-Mayotte,Low Income Country,3000,,
-Mexico,Lower Middle Income Country,10996,,
-Micronesia,Low Income Country,816,,
-Moldova,Low Income Country,4744,,
-Monaco,High Income Country,190000,,
-Mongolia,Low Income Country,4965,,
-Montenegro,Lower Middle Income Country,9918,,
-Montserrat,High Middle Income Country,19000,,
-Morocco,Low Income Country,3595,,
-Mozambique,Low Income Country,547,,
-Myanmar,Low Income Country,1104,,
-Namibia,Lower Middle Income Country,4363,,
-Nauru,Lower Middle Income Country,11970,,
-Navassa Island,Low Income Country,,,
-Nepal,Low Income Country,1374,,
-Netherlands,High Income Country,55356,,
-Netherlands Antilles,High Middle Income Country,20000,,
-New Caledonia,High Middle Income Country,40000,,
-New Zealand,High Income Country,48177,,
-Nicaragua,Low Income Country,2328,,
-Niger,Low Income Country,552,,
-Nigeria,Low Income Country,2139,,
-Niue,High Middle Income Country,19464,,
-Norfolk Island,High Middle Income Country,20000,,
-Northern Mariana Islands,Lower Middle Income Country,7370,,
-Norway,High Income Country,106155,,
-Oman,High Middle Income Country,24241,,
-Pakistan,Low Income Country,1545,,
-Palau,Lower Middle Income Country,13000,,
-Panama,Lower Middle Income Country,17388,,
-Papua New Guinea,Low Income Country,3002,,
-Paracel islands,Low Income Country,,,
-Paraguay,Low Income Country,6172,,
-Peru,Lower Middle Income Country,7248,,
-Philippines,Low Income Country,3547,,
-Poland,High Middle Income Country,17928,,
-Portugal,High Middle Income Country,24186,,
-Ptcairn Islands,Low Income Country,1884,,
-Puerto Rico,High Middle Income Country,33000,,
-Qatar,High Income Country,82040,,
-Romania,High Middle Income Country,15718,,
-Russia,High Middle Income Country,15390,,
-Rwanda,Low Income Country,975,,
-Saint Barthelemy,High Income Country,41000,,
-"Saint Helena, Ascension, and Tristan da Cunha",Lower Middle Income Country,9000,,
-Saint Martin,High Middle Income Country,35873,,
-Saint Pierre and Miquelon,High Middle Income Country,29000,,
-Samoa,Low Income Country,3867,,
-San Marino,High Income Country,65000,,
-São Tomé and Principe,Low Income Country,2416,,
-Saudi Arabia,High Middle Income Country,34441,,
-Senegal,Low Income Country,1568,,
-Serbia,Lower Middle Income Country,9351,,
-Seychelles,High Middle Income Country,12654,,
-Sierra Leone,Low Income Country,480,,
-Singapore,High Income Country,82619,,
-Slovakia,High Middle Income Country,21097,,
-Slovenia,High Middle Income Country,29367,,
-Solomon Is.,Low Income Country,2043,,
-Somalia,Low Income Country,500,,
-South Africa,High Middle Income Country,6507,,
-South Georgia and South Sandwich Islands,Low Income Country,,,
-Spain,High Middle Income Country,29219,,
-Sri Lanka,Low Income Country,3258,,
-St. Kits and Nevis,High Middle Income Country,19000,,
-St. Lucia,Lower Middle Income Country,12000,,
-St. Vincent and the Grenadines,Lower Middle Income Country,9295,,
-Sudan,Low Income Country,1046,,
-Suriname,Lower Middle Income Country,5810,,
-Svalbard,Low Income Country,,,
-Swaziland,Low Income Country,4500,,
-Sweden,High Income Country,55871,,
-Switzerland,High Income Country,91866,,
-Syria,Low Income Country,1200,,
-Taiwan,High Income Country,34000,,
-Tajikistan,Low Income Country,1030,,
-Tanzania,Low Income Country,1170,,
-Thailand,Lower Middle Income Country,6905,,
-Timor,Low Income Country,2310,,
-Togo,Low Income Country,894,,
-Tokelau,Low Income Country,4000,,
-Tonga,Low Income Country,5000,,
-Trinidad and Tobago,High Middle Income Country,18650,,
-Tunisia,Lower Middle Income Country,3850,,
-Turkey,Lower Middle Income Country,10407,,
-Turkmenistan,Lower Middle Income Country,7200,,
-Turks and Caicos Islands,High Middle Income Country,36000,,
-Tuvalu,Low Income Country,6040,,
-Uganda,Low Income Country,963,,
-Ukraine,Lower Middle Income Country,3910,,
-United Arab Emirates,High Income Country,49554,,
-United Kingdom,High Income Country,45038,,
-United States of America,High Income Country,74554,,
-United States Virgin Islands,High Middle Income Country,36000,,
-Uruguay,High Middle Income Country,20991,,
-Uzbekistan,Low Income Country,2301,,
-Vanuatu,Low Income Country,3142,,
-Venezuela,Low Income Country,3400,,
-Vietnam,Low Income Country,4101,,
-Wake Island,Low Income Country,,,
-Wallis and Futuna,Low Income Country,7000,,
-West bank & Gaza,Low Income Country,3367,,
-Yemen,Low Income Country,650,,
-Zambia,Low Income Country,1478,,
-Zimbabwe,Low Income Country,1287,,
+Country Name,Country Income Level,GDP
+Afghanistan,Low Income Country,356
+Albania,Lower Middle Income Country,6678
+Algeria,Low Income Country,4220
+American Samoa,Lower Middle Income Country,13000
+Andorra,High Income Country,42055
+Angola,Lower Middle Income Country,2995
+Anguilla,High Middle Income Country,25000
+Antarctica,Low Income Country,
+Antigua and Barbuda,Lower Middle Income Country,18932
+Argentina,Lower Middle Income Country,13935
+Armenia,Lower Middle Income Country,6770
+Aruba,High Middle Income Country,34000
+Ashmore and Cartier Islands,Low Income Country,
+Australia,High Income Country,63945
+Austria,High Income Country,52004
+Azerbaijan,Lower Middle Income Country,7646
+Bahamas,High Middle Income Country,32443
+Bahrain,High Income Country,28948
+Bangladesh,Low Income Country,2717
+Barbados,High Middle Income Country,19970
+Belarus,High Middle Income Country,7935
+Belgium,High Income Country,49700
+Belize,Low Income Country,7012
+Benin,Low Income Country,1265
+Bermuda,High Income Country,126000
+Bhutan,Low Income Country,4300
+Bolivia,Low Income Country,3566
+Bosnia and Herz.,Low Income Country,7653
+Botswana,Lower Middle Income Country,8341
+Bouvet Island,Low Income Country,
+Brazil,Lower Middle Income Country,9130
+British Indian Ocean Territory,Low Income Country,
+British Virgin Islands,High Income Country,39000
+Brunei,High Income Country,36633
+Bulgaria,High Middle Income Country,13045
+Burkina Faso,Low Income Country,839
+Burma,Low Income Country,1500
+Burundi,Low Income Country,231
+Cambodia,Low Income Country,1741
+Cameroon,Low Income Country,1605
+Canada,High Income Country,55120
+Cape Verde,Low Income Country,4454
+Cayman Islands,High Income Country,100000
+Central African Rep.,Low Income Country,467
+Chad,Low Income Country,688
+Channel Islands,High Income Country,60000
+Chile,High Middle Income Country,15395
+China,Lower Middle Income Country,12604
+Christmas Island,High Middle Income Country,20000
+Clipperton Island,Low Income Country,
+Cocos (Keelings) Island,Lower Middle Income Country,14000
+Colombia,Lower Middle Income Country,6648
+Comoros,Low Income Country,1489
+Dem. Rep. Congo,Low Income Country,567
+Congo,Low Income Country,2422
+Costa Rica,Lower Middle Income Country,13456
+Côte d'Ivoire,Low Income Country,2304
+Croatia,High Middle Income Country,18163
+Cuba,Lower Middle Income Country,9000
+Curacao,High Middle Income Country,23000
+Cyprus,High Middle Income Country,21361
+Czechia,High Middle Income Country,27257
+Denmark,High Income Country,66985
+Dhekelia,Low Income Country,
+Djibouti,Low Income Country,3500
+Dominica,Lower Middle Income Country,9159
+Dominican Rep.,Lower Middle Income Country,10119
+Ecuador,Low Income Country,6455
+Egypt,Lower Middle Income Country,4233
+El Salvador,Lower Middle Income Country,5173
+Equatorial Guinea,Lower Middle Income Country,6550
+Eritrea,Low Income Country,1500
+Estonia,High Middle Income Country,28221
+Ethiopia,Low Income Country,1011
+Falkland Is.,High Income Country,56000
+Faroe Islands,High Income Country,49000
+Fiji,Low Income Country,5376
+Finland,High Income Country,50424
+France,High Income Country,41989
+French Guiana,High Middle Income Country,22000
+French Polynesia,High Middle Income Country,23000
+French Southern and Antarctic Lands,Low Income Country,
+Gabon,Lower Middle Income Country,8669
+Gambia,Low Income Country,862
+Gaza Strip,Low Income Country,1300
+Georgia,Lower Middle Income Country,6484
+Germany,High Income Country,48429
+Ghana,Low Income Country,2197
+Gibraltar,High Income Country,110000
+Greece,High Middle Income Country,21039
+Greenland,High Income Country,40000
+Grenada,Lower Middle Income Country,10747
+Guadeloupe,High Middle Income Country,25000
+Guam,High Income Country,36000
+Guatemala,Low Income Country,5323
+Guernsey,High Income Country,67000
+Guinea,Low Income Country,1510
+Guinea-Bissau,Low Income Country,776
+Guyana,High Middle Income Country,18691
+Haiti,Low Income Country,1761
+Heard Island and McDonald Islands,Low Income Country,
+Holy See (Vatican City),High Middle Income Country,20000
+Honduras,Low Income Country,3031
+"Hong Kong, China",High Income Country,48198
+Hungary,High Middle Income Country,18462
+Iceland,High Income Country,73199
+India,Low Income Country,2375
+Indonesia,Low Income Country,4731
+Iran,Lower Middle Income Country,4340
+Iraq,Low Income Country,5995
+Ireland,High Income Country,103570
+Isle of Man,High Income Country,51000
+Israel,High Income Country,57346
+Italy,High Income Country,33721
+Jamaica,Lower Middle Income Country,6022
+Jan Mayen,Low Income Country,
+Japan,High Income Country,33850
+Jersey,High Income Country,56000
+Jordan,Lower Middle Income Country,4216
+Kazakhstan,High Middle Income Country,11012
+Kenya,Low Income Country,2091
+Kiribati,Low Income Country,1712
+North Korea,Low Income Country,1200
+South Korea,High Middle Income Country,32159
+Kosovo,Low Income Country,4800
+Kuwait,High Income Country,40213
+Kyrgyzstan,Low Income Country,1571
+Laos,Low Income Country,2080
+Latvia,High Middle Income Country,21878
+Lebanon,Low Income Country,3700
+Lesotho,Low Income Country,1117
+Liberia,Low Income Country,745
+Libya,Lower Middle Income Country,6334
+Lithuania,High Middle Income Country,24969
+Luxembourg,High Income Country,125935
+"Macao, China",High Middle Income Country,31205
+Macedonia,Lower Middle Income Country,7400
+Madagascar,Low Income Country,491
+Malawi,Low Income Country,640
+Malaysia,High Middle Income Country,11711
+Maldives,Low Income Country,11810
+Mali,Low Income Country,816
+Malta,High Middle Income Country,33634
+Marshall Islands,Low Income Country,6978
+Martinique,High Middle Income Country,25000
+Mauritania,Low Income Country,2128
+Mauritius,Lower Middle Income Country,10107
+Mayotte,Low Income Country,3000
+Mexico,Lower Middle Income Country,10996
+Micronesia,Low Income Country,816
+Moldova,Low Income Country,4744
+Monaco,High Income Country,190000
+Mongolia,Low Income Country,4965
+Montenegro,Lower Middle Income Country,9918
+Montserrat,High Middle Income Country,19000
+Morocco,Low Income Country,3595
+Mozambique,Low Income Country,547
+Myanmar,Low Income Country,1104
+Namibia,Lower Middle Income Country,4363
+Nauru,Lower Middle Income Country,11970
+Navassa Island,Low Income Country,
+Nepal,Low Income Country,1374
+Netherlands,High Income Country,55356
+Netherlands Antilles,High Middle Income Country,20000
+New Caledonia,High Middle Income Country,40000
+New Zealand,High Income Country,48177
+Nicaragua,Low Income Country,2328
+Niger,Low Income Country,552
+Nigeria,Low Income Country,2139
+Niue,High Middle Income Country,19464
+Norfolk Island,High Middle Income Country,20000
+Northern Mariana Islands,Lower Middle Income Country,7370
+Norway,High Income Country,106155
+Oman,High Middle Income Country,24241
+Pakistan,Low Income Country,1545
+Palau,Lower Middle Income Country,13000
+Panama,Lower Middle Income Country,17388
+Papua New Guinea,Low Income Country,3002
+Paracel islands,Low Income Country,
+Paraguay,Low Income Country,6172
+Peru,Lower Middle Income Country,7248
+Philippines,Low Income Country,3547
+Poland,High Middle Income Country,17928
+Portugal,High Middle Income Country,24186
+Ptcairn Islands,Low Income Country,1884
+Puerto Rico,High Middle Income Country,33000
+Qatar,High Income Country,82040
+Romania,High Middle Income Country,15718
+Russia,High Middle Income Country,15390
+Rwanda,Low Income Country,975
+Saint Barthelemy,High Income Country,41000
+"Saint Helena, Ascension, and Tristan da Cunha",Lower Middle Income Country,9000
+Saint Martin,High Middle Income Country,35873
+Saint Pierre and Miquelon,High Middle Income Country,29000
+Samoa,Low Income Country,3867
+San Marino,High Income Country,65000
+São Tomé and Principe,Low Income Country,2416
+Saudi Arabia,High Middle Income Country,34441
+Senegal,Low Income Country,1568
+Serbia,Lower Middle Income Country,9351
+Seychelles,High Middle Income Country,12654
+Sierra Leone,Low Income Country,480
+Singapore,High Income Country,82619
+Slovakia,High Middle Income Country,21097
+Slovenia,High Middle Income Country,29367
+Solomon Is.,Low Income Country,2043
+Somalia,Low Income Country,500
+South Africa,High Middle Income Country,6507
+South Georgia and South Sandwich Islands,Low Income Country,
+Spain,High Middle Income Country,29219
+Sri Lanka,Low Income Country,3258
+St. Kits and Nevis,High Middle Income Country,19000
+St. Lucia,Lower Middle Income Country,12000
+St. Vincent and the Grenadines,Lower Middle Income Country,9295
+Sudan,Low Income Country,1046
+Suriname,Lower Middle Income Country,5810
+Svalbard,Low Income Country,
+Swaziland,Low Income Country,4500
+Sweden,High Income Country,55871
+Switzerland,High Income Country,91866
+Syria,Low Income Country,1200
+Taiwan,High Income Country,34000
+Tajikistan,Low Income Country,1030
+Tanzania,Low Income Country,1170
+Thailand,Lower Middle Income Country,6905
+Timor,Low Income Country,2310
+Togo,Low Income Country,894
+Tokelau,Low Income Country,4000
+Tonga,Low Income Country,5000
+Trinidad and Tobago,High Middle Income Country,18650
+Tunisia,Lower Middle Income Country,3850
+Turkey,Lower Middle Income Country,10407
+Turkmenistan,Lower Middle Income Country,7200
+Turks and Caicos Islands,High Middle Income Country,36000
+Tuvalu,Low Income Country,6040
+Uganda,Low Income Country,963
+Ukraine,Lower Middle Income Country,3910
+United Arab Emirates,High Income Country,49554
+United Kingdom,High Income Country,45038
+United States of America,High Income Country,74554
+United States Virgin Islands,High Middle Income Country,36000
+Uruguay,High Middle Income Country,20991
+Uzbekistan,Low Income Country,2301
+Vanuatu,Low Income Country,3142
+Venezuela,Low Income Country,3400
+Vietnam,Low Income Country,4101
+Wake Island,Low Income Country,
+Wallis and Futuna,Low Income Country,7000
+West bank & Gaza,Low Income Country,3367
+Yemen,Low Income Country,650
+Zambia,Low Income Country,1478
+Zimbabwe,Low Income Country,1287
